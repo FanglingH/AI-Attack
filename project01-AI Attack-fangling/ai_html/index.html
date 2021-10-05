@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 浏览器头文件，默认这个即可 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import style sheet 默认-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Import javascript code 引用本地的CSS文件 "./css/style.css"解释为本地文件/CSS文件夹/style.css-->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!-- 引用本地JavaScript文件 -->
+    <title>AI Attack</title>
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div id="app">
+      <h1>Will AI make us better?</h1>
+      <!-- Gallery Section 标题文字-->
+      <section class="gallery flex" id="gallery"></section>
+      <!-- 创建一个章节，相当于划出一个区域进行内容填充，为这个节创建一个唯一的标签"gallery"，引用的样式为css文件中"gallery flex" -->
+      <div class="divider"></div>
+      <!-- 创建一个图层，以填充内容 -->
+      <h1>Will AI threaten humanity?</h1>
+      <!-- 标题同上 -->
+      <section class="btn_group flex">
+        <!-- 段落同上 -->
+        <div class="btn_group-item btn_group-item_1" onclick="onBtnClicked('agree')">
+          <!-- 创建一个区域作为按钮，样式为css文件中"btn_group-item btn_group-item_1"，点击后触发JavaScript中的('agree')函数 -->
+            <div class="btn_group-item-mask mask_1"></div>
+            <div class="btn_group-item-text">AGREE</div>
+        </div>
+        <div class="btn_group-item btn_group-item_2" onclick="onBtnClicked('neutral')">
+            <div class="btn_group-item-mask mask_2"></div>
+            <div class="btn_group-item-text">NEUTRAL</div>
+        </div>
+        <div class="btn_group-item btn_group-item_3" onclick="onBtnClicked('disagree')">
+            <div class="btn_group-item-mask mask_3"></div>
+            <div class="btn_group-item-text">DISAGREE</div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <!-- 创建一个图层，用以填充视频文件 -->
+      <video src="./assets/videos/video.mp4" class="video mt-20" controls></video>
+      <!-- 引入视频文件，包含视频地址，视频样式 -->
+    </div>
+    <!-- AUDIOS -->
+    <audio src="./assets/audios/agree.mp3" id="agree"></audio>
+    <!-- 引入音频文件，同下 -->
+    <audio src="./assets/audios/neutral.mp3" id="neutral"></audio>
+    <audio src="./assets/audios/disagree.mp3" id="disagree"></audio>
+  </body>
+</html>
